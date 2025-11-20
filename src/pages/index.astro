@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Home">
+  <section class="hero min-h-[70vh] bg-base-200 rounded-xl p-8">
+    <div class="hero-content flex-col-reverse lg:flex-row gap-10 text-center lg:text-left">
+      
+      <!-- Left side: Text -->
+      <div class="max-w-xl">
+        <h1 class="text-5xl font-bold">
+          Hey, I'm <span class="text-primary">Thomas Gonzalez</span>
+        </h1>
+        <p class="py-6 text-lg leading-relaxed">
+          Mechanical Engineering student at Johns Hopkins, specializing in 
+          robotics, medical device development, and electromechanical systems.
+        </p>
+
+        <div class="flex gap-4">
+          <a href="/projects" class="btn btn-primary">View My Projects</a>
+          <a href="/about" class="btn btn-outline">About Me</a>
+        </div>
+      </div>
+
+      <!-- Right side placeholder -->
+      <div class="w-60 h-60 rounded-xl bg-base-300 flex items-center justify-center text-4xl">
+        🔧
+      </div>
+
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl font-bold mb-6 text-right">Featured Projects</h2>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Project Card 1 -->
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title">Hopkinauts Mars Rover</h3>
+          <p>
+            Autonomous robotic arm designed for biological sample collection for the 
+            University Rover Challenge.
+          </p>
+          <div class="card-actions justify-end">
+            <a href="/projects#rover" class="btn btn-primary btn-sm">View</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title">Biodegradable Sensors</h3>
+          <p>
+            Lab experience developing biodegradable cardiac sensors for post-transplant 
+            patient monitoring.
+          </p>
+          <div class="card-actions justify-end">
+            <a href="/projects#sensors" class="btn btn-primary btn-sm">View</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title">Arcade Game: Gas</h3>
+          <p>
+            Freshman Lab design project — custom-built arcade game with electromechanical 
+            controls and custom lighting/sound.
+          </p>
+          <div class="card-actions justify-end">
+            <a href="/projects#gas" class="btn btn-primary btn-sm">View</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

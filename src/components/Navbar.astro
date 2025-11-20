@@ -1,0 +1,55 @@
+---
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/contact", label: "Contact" },
+
+];
+---
+
+<nav class="navbar bg-base-100 px-4">
+  <div class="navbar-start">
+    <!-- Mobile Dropdown -->
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+        {navLinks.map(link => (
+          <li><a href={link.href}>{link.label}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Brand / Title -->
+    <a href="/" class="btn btn-ghost text-xl font-bold">Thomas Gonzalez</a>
+  </div>
+
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      {navLinks.map(link => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="navbar-end">
+    <!-- Theme Toggle -->
+    <label class="swap swap-rotate">
+      <input type="checkbox" class="theme-controller" value="dark" />
+      <svg class="swap-off h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 24 24">
+        <path d="M5.64 17.66A9 9 0 0012 21a9 9 0 000-18 9 9 0 00-6.36 14.66z"></path>
+      </svg>
+      <svg class="swap-on h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 24 24">
+        <path d="M21.64 13a1 1 0 00-1.05-.14A7 7 0 0111 5.31a1 1 0 00-1-1 9 9 0 108.72 12.78 1 1 0 00-.08-1.09z"></path>
+      </svg>
+    </label>
+  </div>
+</nav>
