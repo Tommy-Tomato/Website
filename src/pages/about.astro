@@ -1,47 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import about from "../content/about/about.json";
 ---
 
-<Layout title="About Me">
-
-  <section class="max-w-3xl mx-auto mt-10 px-4">
-    <h1 class="text-4xl font-bold mb-6">About Me</h1>
-
-    <p class="mb-6 text-lg leading-relaxed">
-      Hi! I'm <span class="font-semibold">Thomas Gonzalez</span>, a Mechanical 
-      Engineering student at Johns Hopkins University. I specialize in
-      robotics, electromechanical systems, and medical device development.
-      I love building systems that move, sense, solve problems, and help people.
-    </p>
-
-    <p class="mb-6 text-lg leading-relaxed">
-      At Hopkins, I lead the Hopkinauts Mars Rover Arm Sub-Team, where I design, 
-      build, and train autonomous robotic systems for the University Rover Challenge.
-      I also contributed to the rover’s biological analysis components and helped
-      raise support for the team.
-    </p>
-
-    <p class="mb-6 text-lg leading-relaxed">
-      Previously, I worked with researchers in biomedical engineering at George 
-      Washington University to develop biodegradable sensors for heart transplant
-      patients. I’ve also designed and analyzed mechanical systems, performed
-      subsystem diagnostics, and built custom electromechanical devices.
-    </p>
+<Layout title="About">
+  <section class="prose lg:prose-xl max-w-4xl mx-auto py-12">
+    <h1>About Me</h1>
+    <p>{about.aboutText}</p>
   </section>
-
-
-  <!-- Skills Section -->
-  <section class="max-w-4xl mx-auto mt-14 px-4">
-    <h2 class="text-3xl font-bold mb-4">Skills & Tools</h2>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-      <div class="badge badge-lg">CAD (Fusion 360 / SolidWorks)</div>
-      <div class="badge badge-lg">ANSYS FEA</div>
-      <div class="badge badge-lg">Robotics</div>
-      <div class="badge badge-lg">Electronics</div>
-      <div class="badge badge-lg">MATLAB / LabVIEW</div>
-      <div class="badge badge-lg">Prototyping & Fabrication</div>
-    </div>
-  </section>
-
 </Layout>

@@ -1,59 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+// Load all project files
+const projects = await Astro.glob("../content/projects/*.json");
 ---
 
 <Layout title="Projects">
+  <section class="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-  <section class="max-w-4xl mx-auto mt-10 px-4">
-    <h1 class="text-4xl font-bold mb-8">My Projects</h1>
-
-    <div class="space-y-10">
-
-      <!-- Project 1 -->
-      <div id="rover" class="card bg-base-200 shadow-xl">
+    {projects.map(project => (
+      <div class="card bg-base-200 shadow-xl">
         <div class="card-body">
-          <h2 class="card-title">Hopkinauts Mars Rover</h2>
-          <p>
-            Designed an autonomous robotic arm for sample collection and terrain interaction,
-            contributing to the University Rover Challenge. Focused on kinematics, control
-            algorithms, and electromechanical integration.
-          </p>
+          <h3 class="card-title">{project.title}</h3>
+          <p>{project.description}</p>
           <div class="card-actions justify-end">
-            <a class="btn btn-primary btn-sm">More Info</a>
+            <a href={project.link} class="btn btn-primary btn-sm">View</a>
           </div>
         </div>
       </div>
+    ))}
 
-      <!-- Project 2 -->
-      <div id="sensors" class="card bg-base-200 shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title">Biodegradable Sensors for Cardiac Monitoring</h2>
-          <p>
-            Worked with biomedical researchers to create biodegradable, implantable sensors
-            for monitoring transplant patients. Gained experience with circuit design and
-            bio-compatible materials.
-          </p>
-          <div class="card-actions justify-end">
-            <a class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div id="gas" class="card bg-base-200 shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title">Arcade Game: “Gas”</h2>
-          <p>
-            Built a custom arcade-style game with electromechanical controls, LED lighting,
-            a pressure-based trigger mechanism, and Arduino control logic.
-          </p>
-          <div class="card-actions justify-end">
-            <a class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
   </section>
-
 </Layout>
