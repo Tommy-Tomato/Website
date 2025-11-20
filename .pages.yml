@@ -1,0 +1,49 @@
+media:
+  input: public
+  output: /
+  label: Media
+
+content:
+  # Home page content (single JSON file)
+  - name: home
+    label: Home
+    type: file
+    path: src/content/home/home.json
+    fields:
+      - name: heroTitle
+        label: Hero title
+        type: string
+      - name: heroSubtitle
+        label: Hero subtitle
+        type: text
+      - name: resumeUrl
+        label: Resume URL
+        type: string
+
+  # About page content (single JSON file)
+  - name: about
+    label: About
+    type: file
+    path: src/content/about/about.json
+    fields:
+      - name: aboutText
+        label: About text
+        type: text
+
+  # Projects content folder (multiple JSON files)
+  - name: projects
+    label: Projects
+    type: collection
+    path: src/content/projects
+    view:
+      fields: [title]
+    fields:
+      - name: title
+        label: Project title
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: link
+        label: Project link
+        type: string
