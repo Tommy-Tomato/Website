@@ -4,7 +4,6 @@ media:
   label: Media
 
 content:
-  # Home page content (single JSON file)
   - name: home
     label: Home
     type: file
@@ -19,6 +18,11 @@ content:
       - name: resumeUrl
         label: Resume URL
         type: string
+      - name: heroImage
+        label: Hero Image
+        type: image
+        directory: public/uploads
+        publicPath: /uploads
 
   # About page content (single JSON file)
   - name: about
