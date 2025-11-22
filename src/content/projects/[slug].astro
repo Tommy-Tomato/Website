@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const { slug } = Astro.params;
+
+// Match the file name (id) instead of slug
+const project = (await getCollection("projects")).find(
+  (p: any) => p.id === slug
+);
+
+if (!project) {
+  throw new Error(`Project not found: ${slug}`);
+}
+---
+
+<Layout title={project.data.title}>
+  <section class="p-10 max-w-3xl mx-auto">
+    <h1 class="text-4xl font-bold mb-6">{project.data.title}</h1>
+
+    <p class="text-lg mb-6">
+      {project.data.description}
+    </p>
+
+    {project.data.image && (
+      <img src={project.data.image} alt={project.data.title} class="rounded-xl mb-6" />
+    )}
+
+    {project.data.link && (
+      <a href={project.data.link} class="btn btn-primary">Visit Project</a>
+    )}
+  </section>
+</Layout>
