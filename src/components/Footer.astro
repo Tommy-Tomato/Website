@@ -1,50 +1,9 @@
----
-const year = new Date().getFullYear();
----
-
-<footer class="footer p-10 bg-base-200 text-base-content mt-20">
+<footer class="footer footer-center p-10 bg-base-200 rounded-xl mt-10">
   <aside>
-    <h2 class="text-xl font-bold">Thomas</h2>
-    <p>
-      Mechanical Engineering @ Johns Hopkins<br />
-      Robotics • MedTech • Electromechanical Systems
-    </p>
-    <p class="mt-2 opacity-70">© {year} Thomas Gonzalez</p>
+    <p class="font-bold">© {new Date().getFullYear()} Thomas Gonzalez</p>
   </aside>
-
-  <nav>
-    <h6 class="footer-title">Pages</h6>
-    <a href="/" class="link link-hover">Home</a>
-    <a href="/about" class="link link-hover">About</a>
-    <a href="/projects" class="link link-hover">Projects</a>
-  </nav>
-
-  <nav>
-    <h6 class="footer-title">Social</h6>
-
-    <!-- LinkedIn Icon -->
-    <a href="https://www.linkedin.com/in/tgonza/" target="_blank" class="btn btn-ghost btn-circle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="currentColor"
-        viewBox="0 0 24 24">
-        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 23.5h4.56V7.98H.22V23.5zM8.67 7.98h4.37v2.12h.06c.61-1.16 2.12-2.38 4.36-2.38 4.66 0 5.52 3.07 5.52 7.06V23.5h-4.56v-6.88c0-1.64-.03-3.74-2.28-3.74-2.28 0-2.63 1.78-2.63 3.62V23.5H8.67V7.98z"/>
-      </svg>
-    </a>
-    
-    <!-- Email Icon -->
-    <a href="mailto:tgonza22@jh.edu" class="btn btn-ghost btn-circle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M16 12l-4 4m0 0l-4-4m4 4V8m8 4a8 8 0 11-16 0 8 8 0 0116 0z"/>
-      </svg>
-    </a>
-
+  <nav class="grid grid-flow-col gap-6">
+    <a href="https://www.linkedin.com/in/thomasgonzalez/" class="btn btn-ghost btn-circle">🔗</a>
+    <a href="mailto:tgonza22@jh.edu" class="btn btn-ghost btn-circle">✉️</a>
   </nav>
 </footer>

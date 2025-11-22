@@ -1,29 +1,29 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const home = defineCollection({
-  type: "content",
+  type: "data",
   schema: z.object({
     heroTitle: z.string(),
     heroSubtitle: z.string(),
     resumeUrl: z.string().optional(),
-    heroImage: z.string().optional(),   // CMS will fill this when you upload
+    heroImage: z.string().optional(),
   }),
 });
 
 const about = defineCollection({
-  type: "content",
+  type: "data",
   schema: z.object({
     aboutText: z.string(),
   }),
 });
 
 const projects = defineCollection({
-  type: "content",
+  type: "data",
   schema: z.object({
     title: z.string(),
     description: z.string(),
     link: z.string(),
-    image: z.string().optional(),       // CMS can upload images now
+    image: z.string().optional(),
   }),
 });
 

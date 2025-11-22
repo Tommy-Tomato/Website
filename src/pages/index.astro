@@ -1,34 +1,62 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import home from "../content/home.json";
+import { getEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+const home = await getEntry("home", "home");
+const projects = await getCollection("projects");
 ---
 
 <Layout title="Home">
   <section class="hero min-h-[70vh] bg-base-200 rounded-xl p-8">
     <div class="hero-content flex-col lg:flex-row gap-10">
 
-      <!-- Left side: Text -->
+      <!-- Hero text -->
       <div class="max-w-xl">
-        <h1 class="text-5xl font-bold">
-          {home.heroTitle}
-        </h1>
+        <h1 class="text-5xl font-bold">{home.data.heroTitle}</h1>
 
         <p class="py-6 text-lg leading-relaxed">
-          {home.heroSubtitle}
+          {home.data.heroSubtitle}
         </p>
 
         <div class="flex gap-4">
           <a href="/projects" class="btn btn-primary">View My Projects</a>
           <a href="/about" class="btn btn-outline">About Me</a>
-          <a href={home.resumeUrl} class="btn btn-secondary">Resume</a>
+          <a href={home.data.resumeUrl} class="btn btn-secondary">Resume</a>
         </div>
       </div>
 
-      <!-- Right side placeholder -->
-      <div class="w-60 h-60 rounded-xl bg-base-300 flex items-center justify-center text-4xl">
-        🔧
+      <!-- Hero image -->
+      <div class="w-60 h-60 rounded-xl bg-base-300 flex items-center justify-center">
+        {home.data.heroImage ? (
+          <img src={home.data.heroImage} class="rounded-xl object-cover" />
+        ) : (
+          "🔧"
+        )}
       </div>
 
+    </div>
+  </section>
+
+  <!-- Featured projects -->
+  <section class="mt-20">
+    <h2 class="text-3xl font-bold mb-6 text-right">Featured Projects</h2>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map(project => (
+        <div class="card bg-base-200 shadow-xl">
+          <div class="card-body">
+            <h3 class="card-title">{project.data.title}</h3>
+            <p>{project.data.description}</p>
+
+            <div class="card-actions justify-end">
+              <a href={`/projects/${project.slug}`} class="btn btn-primary btn-sm">
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 </Layout>
