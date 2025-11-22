@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, getEntry } from "astro:content";
+
+// Generate static paths for all projects
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+
+  return projects.map((project) => ({
+    params: { slug: project.id },   // project.id is the filename (gas, rover, zoo)
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<Layout title={project.data.title}>
+  <section class="max-w-3xl mx-auto py-10 space-y-6">
+
+    <h1 class="text-4xl font-bold">{project.data.title}</h1>
+
+    <p class="text-lg">{project.data.description}</p>
+
+    <!-- Multiple images gallery -->
+    {project.data.images && (
+      <div class="grid gap-6 mt-6">
+        {project.data.images.map((img) => (
+          <img src={img} alt={project.data.title} class="rounded-xl shadow-lg" />
+        ))}
+      </div>
+    )}
+
+    <a href="/projects" class="btn btn-primary mt-10">← Back to Projects</a>
+
+  </section>
+</Layout>

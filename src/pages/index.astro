@@ -4,12 +4,39 @@ import home from "../content/home.json";
 ---
 
 <Layout title="Home">
+    <!-- ============================= -->
+<!--   INTRO HEADER SECTION        -->
+<!-- ============================= -->
+<section class="w-full py-20 px-10 flex flex-col lg:flex-row justify-between items-center gap-10">
+
+  <!-- LEFT SIDE: TEXT -->
+  <div class="max-w-xl">
+    <h1 class="text-6xl font-bold font-epoch leading-tight">
+      Thomas Gonzalez
+    </h1>
+
+    <p class="text-2xl text-gray-500 mt-4">
+      Mechanical Engineering
+    </p>
+
+  </div>
+
+  <!-- RIGHT SIDE: IMAGES GRID -->
+  <div class="grid grid-cols-2 grid-rows-2 gap-6 max-w-xl">
+    <img src="/images/engine.jpg" class="rounded-2xl object-cover h-56 w-56" />
+    <img src="/images/drawing.jpg" class="rounded-2xl object-cover h-56 w-56" />
+    <img src="/images/lab.jpg" class="rounded-2xl object-cover col-span-2 h-64 w-full" />
+  </div>
+
+</section>
+
+  
   <section class="hero min-h-[70vh] bg-base-200 rounded-xl p-8">
     <div class="hero-content flex-col lg:flex-row gap-10">
 
       <!-- Left side: Text -->
       <div class="max-w-xl">
-        <h1 class="text-5xl font-bold">
+        <h1 class="text-5xl font-bold font-epoch">
           {home.heroTitle}
         </h1>
 
@@ -17,16 +44,28 @@ import home from "../content/home.json";
           {home.heroSubtitle}
         </p>
 
-        <div class="flex gap-4">
-          <a href="/projects" class="btn btn-primary">View My Projects</a>
-          <a href="/about" class="btn btn-outline">About Me</a>
-          <a href={home.resumeUrl} class="btn btn-secondary">Resume</a>
-        </div>
+<div class="flex gap-4">
+  <a href="/projects" class="btn bg-teal-600 hover:bg-teal-700 text-white border-none">
+    View My Projects
+  </a>
+
+  <a href="/about" class="btn bg-transparent border-2 border-teal-600 text-teal-600 hover:bg-teal-50">
+    About Me
+  </a>
+
+  <a href={home.resumeUrl} class="btn bg-teal-500 hover:bg-teal-600 text-white border-none">
+    Resume
+  </a>
+</div>
       </div>
 
-      <!-- Right side placeholder -->
-      <div class="w-60 h-60 rounded-xl bg-base-300 flex items-center justify-center text-4xl">
-        🔧
+      <!-- Right side: Hero image -->
+      <div class="w-[450px] h-[450px] rounded-xl bg-base-300 overflow-hidden flex items-center justify-center">
+        <img 
+          src="/images/hero.jpg" 
+          alt="Hero Image"
+          class="object-cover w-full h-full"
+        />
       </div>
 
     </div>

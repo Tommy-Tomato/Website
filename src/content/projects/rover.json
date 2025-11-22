@@ -1,5 +1,6 @@
 {
-  "title": "Hopkinauts Mars Rover",
-  "description": "Autonomous robotic arm designed for biological sample collection.",
-  "link": "/projects#rover"
+  "title": "Hopkinauts Mars Rover Team",
+  "shortDescription": "Autonomous Rover with custom 6 DOF mechanical arm.",
+  "description": "As the Mechanical Subteam Lead for the Hopkinauts Mars Rover Team at Johns Hopkins University, I led a team of over 20 students in designing and building the rover’s frame, robotic arm, and science box for the University Rover Challenge (URC). I designed a 6-DOF robotic arm and conducted FEA in Ansys Mechanical to optimize a custom cycloidal gearbox and end-effector for strength and precision. Our team achieved 80% life detection accuracy using a custom soil delivery mechanism, chemical analyses, and a spectrometer. In addition, I helped raise $25,000 through sponsorships and donations, and we presented our project at JHU Design Day 2025 and JHU Physics Day 2025.",
+  "image": "/images/rover.jpg"
 }

@@ -1,5 +1,9 @@
 {
-  "title": "Gas",
-  "description": "Autonomous robotic arm designed for biological sample collection.",
-  "link": "/projects#gas"
+  "title": "Research Intern @ AMIRo Lab",
+  "shortDescription": "*ADD MORE*",
+  "description": "in the works",
+"images": [
+  "/images/rover1.jpg",
+  "/images/rover2.jpg"
+]
 }

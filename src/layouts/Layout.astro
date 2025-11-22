@@ -3,27 +3,26 @@ const { title } = Astro.props;
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="generator" content={Astro.generator} />
-  <title>{title}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
 
-  <!-- Load Tailwind + DaisyUI -->
-  <link rel="stylesheet" href="/styles.css" />
+    <title>{title}</title>
+
+    <!-- Load global styles properly -->
+    <link rel="stylesheet" href="/src/styles.css" />
   </head>
 
-<body class="min-h-screen bg-base-100">
-  <Navbar />
+  <body class="min-h-screen bg-base-100">
+    <Navbar />
 
-  <main class="p-6 pb-20">
-    <slot />
-  </main>
+    <main class="p-6 pb-20">
+      <slot />
+    </main>
 
-  <Footer />
-</body>
-
+    <Footer />
+  </body>
 </html>

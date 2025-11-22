@@ -1,6 +1,6 @@
 {
   "heroTitle": "Hi, I'm Tommy",
-  "heroSubtitle": "Mechanical Engineering student at Johns Hopkins University passionate about building innovative robotic and mechatronic systems.",
+  "heroSubtitle": "Mechanical Engineering student at Johns Hopkins University passionate about building innovative robotic and mechanical systems.",
   "resumeUrl": "/resume.pdf",
-  "heroImage": ""
+  "heroImage": "/images/hero.jpg"
 }

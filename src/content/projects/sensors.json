@@ -1,5 +1,9 @@
 {
-  "title": "Sensors",
-  "description": "Autonomous robotic arm designed for biological sample collection.",
-  "link": "/projects#sensors"
+  "title": "Variable Pursuits @ The Maryland Zoo",
+  "shortDescription": "Arduino based node network improving animal welfare.",
+  "description": "As an Engineering Intern, I enhanced animal well-being by developing interactive enrichment devices that integrate Arduino microcontrollers with sound, motion detection, and RF communication modules. To improve usability, I created a C++ user interface that streamlined system control for zookeepers. Through extensive testing and validation of LiDAR, PIR, and Doppler sensors, I achieved a 95% detection accuracy rate. This project has also led to partnerships with leading zoos across the country, with active plans to implement the enrichment devices in facilities spanning over five states.",
+"images": [
+  "/images/sensors1.jpg",
+  "/images/sensors2.jpg"
+]
 }
