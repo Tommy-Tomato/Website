@@ -30,5 +30,5 @@ const projects = defineCollection({
 export const collections = {
   home,
   about,
-  projects
+  projects,
 };
