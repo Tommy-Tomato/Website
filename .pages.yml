@@ -7,7 +7,7 @@ content:
   - name: home
     label: Home
     type: file
-    path: src/content/home.json
+    path: src/content/home/home.json
     fields:
       - name: heroTitle
         label: Hero title
@@ -28,7 +28,7 @@ content:
   - name: about
     label: About
     type: file
-    path: src/content/about.json
+    path: src/content/about/about.json
     fields:
       - name: aboutText
         label: About text
