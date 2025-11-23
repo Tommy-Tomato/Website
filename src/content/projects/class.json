@@ -1,15 +1,14 @@
 {
-  "title": "Research Intern @ AMIRo Lab",
+  "title": "Class Projects",
   "shortDescription": "*ADD MORE*",
   "description": "in the works",
-
   "images": [
     {
-      "src": "/images/research1.png",
+      "src": "/images/class1.png",
       "caption": "Testing cycloidal gearbox"
     },
     {
-      "src": "/images/research2.jpg",
+      "src": "/images/class2.jpg",
       "caption": "Testing cycloidal gearbox"
     }
   ]

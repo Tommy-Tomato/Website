@@ -18,15 +18,19 @@ const about = defineCollection({
 });
 
 const projects = defineCollection({
-  type: "data",
+  type: "data",   // ✅ FIXED
   schema: z.object({
     title: z.string(),
     shortDescription: z.string(),
     description: z.string(),
-    images: z.array(z.string()).optional(),  // 👈 multiple images!
+    images: z.array(
+      z.object({
+        src: z.string(),
+        caption: z.string().optional(),
+      })
+    ).optional(),
   }),
 });
-
 
 export const collections = {
   home,
