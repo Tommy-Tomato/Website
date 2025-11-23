@@ -75,15 +75,3 @@ import home from "../content/home/home.json";
 </section>
 
 </Layout>
-
-<script is:inline>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  });
-
-  document.querySelectorAll(".scroll-fade").forEach((el) => observer.observe(el));
-</script>

@@ -3,7 +3,7 @@ const {
   title = "Thomas Gonzalez",
   description = "Portfolio of Thomas Gonzalez — Mechanical Engineering student specializing in robotics, mechanical design, and hands-on engineering projects.",
   image = "/images/og-image.jpg",
-  url = "https://Thomasgonzalez.netlify.app"
+  url = "https://thomasgonzalez.netlify.app",
 } = Astro.props;
 
 import Navbar from "../components/Navbar.astro";
@@ -24,14 +24,14 @@ import Footer from "../components/Footer.astro";
     <meta name="author" content="Thomas Gonzalez" />
     <link rel="canonical" href={url} />
 
-    <!-- Open Graph (LinkedIn, Discord, Facebook, Slack, iMessage) -->
+    <!-- Open Graph (Social Media) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
     <meta property="og:url" content={url} />
 
-    <!-- Twitter Card -->
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -43,7 +43,19 @@ import Footer from "../components/Footer.astro";
     <!-- Global Styles -->
     <link rel="stylesheet" href="/src/styles.css" />
 
-    <!-- Slot for pages to inject extra head content -->
+    <!-- ⭐ FIXED: Scroll Animation MUST be global or Astro strips it -->
+    <style is:global>
+      .scroll-fade {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+      }
+      .scroll-fade.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+
     <slot name="head" />
   </head>
 
@@ -55,5 +67,34 @@ import Footer from "../components/Footer.astro";
     </main>
 
     <Footer />
+
+    <!-- GLOBAL SCROLL ANIMATION SCRIPT -->
+    <script is:inline>
+      (function () {
+        function initScrollFade() {
+          const elements = document.querySelectorAll(".scroll-fade");
+          console.log("scroll-fade elements found:", elements.length);
+
+          if (!elements.length) return;
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                console.log("visible:", entry.target);
+              }
+            });
+          });
+
+          elements.forEach((el) => observer.observe(el));
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initScrollFade);
+        } else {
+          initScrollFade();
+        }
+      })();
+    </script>
   </body>
 </html>
