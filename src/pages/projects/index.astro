@@ -6,27 +6,43 @@ const projects = await getCollection("projects");
 ---
 
 <Layout title="Projects">
-  <section class="max-w-6xl mx-auto py-10">
-    <h1 class="text-4xl font-Epoch mb-10">Projects</h1>
+  <section class="max-w-6xl mx-auto py-10 scroll-fade">
 
-<div class="grid gap-8 grid-cols-1 md:grid-cols-2">
-  {projects.map((project) => (
-    <a 
-      href={`/projects/${project.id}`} 
-      class="card bg-base-200 shadow-xl hover:scale-[1.02] transition"
-    >
-      <div class="card-body">
-        <h2 class="card-title font-epoch text-2xl">
-          {project.data.title}
-        </h2>
+    <h1 class="text-4xl font-Epoch mb-10 scroll-fade">Projects</h1>
 
-        <p class="text-gray-600">
-          {project.data.shortDescription}
-        </p>
-      </div>
-    </a>
-  ))}
-</div>
+    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 scroll-fade">
+      {projects.map((project) => (
+        <a 
+          href={`/projects/${project.id}`} 
+          class="card bg-base-200 shadow-xl hover:scale-[1.02] transition scroll-fade"
+        >
+          <div class="card-body scroll-fade">
+            <h2 class="card-title font-epoch text-2xl scroll-fade">
+              {project.data.title}
+            </h2>
+
+            <p class="text-gray-600 scroll-fade">
+              {project.data.shortDescription}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
 
   </section>
 </Layout>
+
+<!-- SAFE SCROLL SCRIPT -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    document.querySelectorAll(".scroll-fade").forEach((el) => observer.observe(el));
+  });
+</script>

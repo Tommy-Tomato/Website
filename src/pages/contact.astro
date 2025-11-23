@@ -4,50 +4,64 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Contact">
 
-  <section class="max-w-3xl mx-auto mt-10 px-4">
-    <h1 class="text-4xl font-Epoch mb-6">Contact Me</h1>
+  <section class="max-w-3xl mx-auto mt-10 px-4 scroll-fade">
+    <h1 class="text-4xl font-Epoch mb-6 scroll-fade">Contact Me</h1>
 
-    <p class="text-lg mb-8">
+    <p class="text-lg mb-8 scroll-fade">
       I'd love to connect!
     </p>
 
     <!-- Contact Card -->
-    <div class="card bg-base-200 shadow-xl p-6">
-      <h2 class="card-title mb-4">Get in Touch</h2>
+    <div class="card bg-base-200 shadow-xl p-6 scroll-fade">
+      <h2 class="card-title mb-4 scroll-fade">Get in Touch</h2>
 
-<div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 scroll-fade">
 
-<!-- Email -->
-<a
-  href="mailto:your_email@domain.com"
-  class="btn bg-teal-600 hover:bg-teal-700 text-white border-none w-fit"
->
-  📩 Email Me
-</a>
+        <!-- Email -->
+        <a
+          href="mailto:your_email@domain.com"
+          class="btn bg-teal-600 hover:bg-teal-700 text-white border-none w-fit scroll-fade"
+        >
+          📩 Email Me
+        </a>
 
-<!-- LinkedIn -->
-<a
-  href="https://www.linkedin.com/in/tgonza/"
-  target="_blank"
-  class="btn bg-transparent border-2 border-teal-600 text-teal-600 hover:bg-teal-50 w-fit"
->
-  🔗 LinkedIn
-</a>
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/tgonza/"
+          target="_blank"
+          class="btn bg-transparent border-2 border-teal-600 text-teal-600 hover:bg-teal-50 w-fit scroll-fade"
+        >
+          🔗 LinkedIn
+        </a>
 
-<!-- Resume -->
-<a
-  href="/resume.pdf"
-  target="_blank"
-  class="btn bg-teal-500 hover:bg-teal-600 text-white border-none w-fit"
->
-  📄 View Resume
-</a>
+        <!-- Resume -->
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          class="btn bg-teal-500 hover:bg-teal-600 text-white border-none w-fit scroll-fade"
+        >
+          📄 View Resume
+        </a>
 
-
-</div>
+      </div>
 
     </div>
 
   </section>
 
 </Layout>
+
+<!-- SAFE SCROLL SCRIPT -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    document.querySelectorAll(".scroll-fade").forEach((el) => observer.observe(el));
+  });
+</script>

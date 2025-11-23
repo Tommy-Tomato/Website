@@ -4,10 +4,24 @@
   font-weight: normal;
   font-style: normal;
 }
+
 body {
   background: red;
 }
 
+/* =============================== */
+/*  FADE-IN + SLIDE-UP ANIMATION  */
+/* =============================== */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @tailwind base;
 @tailwind components;

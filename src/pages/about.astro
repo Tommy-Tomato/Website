@@ -4,41 +4,41 @@ import about from "../content/about/about.json";
 ---
 
 <Layout title="About Me">
-  <section class="max-w-6xl mx-auto py-20 px-6">
+  <section class="max-w-6xl mx-auto py-20 px-6 scroll-fade">
     
-    <h1 class="text-4xl font-epoch mb-6">About Me</h1>
+    <h1 class="text-4xl font-epoch mb-6 scroll-fade">About Me</h1>
 
-    <div class="flex flex-col lg:flex-row items-center gap-12">
+    <div class="flex flex-col lg:flex-row items-center gap-12 scroll-fade">
 
       <!-- LEFT: MAIN IMAGE -->
-      <div class="flex-shrink-0">
+      <div class="flex-shrink-0 scroll-fade">
         <img 
           src="/images/about1.jpg"
           alt="Thomas Gonzalez photo 1"
-          class="rounded-2xl shadow-lg w-[350px] h-[350px] object-cover"
+          class="rounded-2xl shadow-lg w-[350px] h-[350px] object-cover scroll-fade"
         />
       </div>
 
       <!-- RIGHT: TWO STACKED IMAGES + TEXT -->
-      <div class="flex flex-col gap-6 max-w-2xl">
+      <div class="flex flex-col gap-6 max-w-2xl scroll-fade">
 
         <!-- STACKED IMAGES -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 scroll-fade">
           <img 
             src="/images/about2.jpg"
             alt="Thomas Gonzalez photo 2"
-            class="rounded-2xl shadow-lg w-full h-[200px] object-cover"
+            class="rounded-2xl shadow-lg w-full h-[200px] object-cover scroll-fade"
           />
 
           <img 
             src="/images/about3.jpg"
             alt="Thomas Gonzalez photo 3"
-            class="rounded-2xl shadow-lg w-full h-[200px] object-cover"
+            class="rounded-2xl shadow-lg w-full h-[200px] object-cover scroll-fade"
           />
         </div>
 
         <!-- ABOUT TEXT -->
-        <p class="text-lg leading-relaxed">
+        <p class="text-lg leading-relaxed scroll-fade">
           {about.aboutText}
         </p>
 
@@ -48,3 +48,18 @@ import about from "../content/about/about.json";
 
   </section>
 </Layout>
+
+<!-- SAFE SCROLL SCRIPT -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    document.querySelectorAll(".scroll-fade").forEach(el => observer.observe(el));
+  });
+</script>

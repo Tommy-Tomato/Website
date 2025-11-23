@@ -4,70 +4,86 @@ import home from "../content/home/home.json";
 ---
 
 <Layout title="Home">
-    <!-- ============================= -->
+
+<!-- ============================= -->
 <!--   INTRO HEADER SECTION        -->
 <!-- ============================= -->
-<section class="w-full py-20 px-10 flex flex-col lg:flex-row justify-between items-center gap-10">
+<section class="w-full py-20 px-10 flex flex-col lg:flex-row justify-between items-center gap-10 scroll-fade">
 
   <!-- LEFT SIDE: TEXT -->
-  <div class="max-w-xl">
-    <h1 class="text-6xl font-bold font-epoch leading-tight">
+  <div class="max-w-xl scroll-fade">
+    <h1 class="text-6xl font-bold font-epoch leading-tight scroll-fade">
       Thomas Gonzalez
     </h1>
 
-    <p class="text-2xl text-gray-500 mt-4">
+    <p class="text-2xl text-gray-500 mt-4 scroll-fade">
       Mechanical Engineering
     </p>
-
   </div>
 
   <!-- RIGHT SIDE: IMAGES GRID -->
-  <div class="grid grid-cols-2 grid-rows-2 gap-6 max-w-xl">
-    <img src="/images/engine.jpg" class="rounded-2xl object-cover h-56 w-56" />
-    <img src="/images/drawing.jpg" class="rounded-2xl object-cover h-56 w-56" />
-    <img src="/images/lab.jpg" class="rounded-2xl object-cover col-span-2 h-64 w-full" />
+  <div class="grid grid-cols-2 grid-rows-2 gap-6 max-w-xl scroll-fade">
+    <img src="/images/engine.jpg" class="rounded-2xl object-cover h-56 w-56 scroll-fade" />
+    <img src="/images/drawing.jpg" class="rounded-2xl object-cover h-56 w-56 scroll-fade" />
+    <img src="/images/lab.jpg" class="rounded-2xl object-cover col-span-2 h-64 w-full scroll-fade" />
   </div>
 
 </section>
 
-  
-  <section class="hero min-h-[70vh] bg-base-200 rounded-xl p-8">
-    <div class="hero-content flex-col lg:flex-row gap-10">
 
-      <!-- Left side: Text -->
-      <div class="max-w-xl">
-        <h1 class="text-5xl font-bold font-epoch">
-          {home.heroTitle}
-        </h1>
+<!-- ============================= -->
+<!--         HERO SECTION          -->
+<!-- ============================= -->
+<section class="hero min-h-[70vh] bg-base-200 rounded-xl p-8 scroll-fade">
+  <div class="hero-content flex-col lg:flex-row gap-10 scroll-fade">
 
-        <p class="py-6 text-lg leading-relaxed">
-          {home.heroSubtitle}
-        </p>
+    <!-- Left side: Text -->
+    <div class="max-w-xl scroll-fade">
+      <h1 class="text-5xl font-bold font-epoch scroll-fade">
+        {home.heroTitle}
+      </h1>
 
-<div class="flex gap-4">
-  <a href="/projects" class="btn bg-teal-600 hover:bg-teal-700 text-white border-none">
-    View My Projects
-  </a>
+      <p class="py-6 text-lg leading-relaxed scroll-fade">
+        {home.heroSubtitle}
+      </p>
 
-  <a href="/about" class="btn bg-transparent border-2 border-teal-600 text-teal-600 hover:bg-teal-50">
-    About Me
-  </a>
+      <div class="flex gap-4 scroll-fade">
+        <a href="/projects" class="btn bg-teal-600 hover:bg-teal-700 text-white border-none scroll-fade">
+          View My Projects
+        </a>
 
-  <a href={home.resumeUrl} class="btn bg-teal-500 hover:bg-teal-600 text-white border-none">
-    Resume
-  </a>
-</div>
+        <a href="/about" class="btn bg-transparent border-2 border-teal-600 text-teal-600 hover:bg-teal-50 scroll-fade">
+          About Me
+        </a>
+
+        <a href={home.resumeUrl} class="btn bg-teal-500 hover:bg-teal-600 text-white border-none scroll-fade">
+          Resume
+        </a>
       </div>
-
-      <!-- Right side: Hero image -->
-      <div class="w-[450px] h-[450px] rounded-xl bg-base-300 overflow-hidden flex items-center justify-center">
-        <img 
-          src="/images/hero.jpg" 
-          alt="Hero Image"
-          class="object-cover w-full h-full"
-        />
-      </div>
-
     </div>
-  </section>
+
+    <!-- Right side: Hero image -->
+    <div class="w-[450px] h-[450px] rounded-xl bg-base-300 overflow-hidden flex items-center justify-center scroll-fade">
+      <img 
+        src="/images/hero.jpg" 
+        alt="Hero Image"
+        class="object-cover w-full h-full scroll-fade"
+      />
+    </div>
+
+  </div>
+</section>
+
 </Layout>
+
+<script is:inline>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  });
+
+  document.querySelectorAll(".scroll-fade").forEach((el) => observer.observe(el));
+</script>
