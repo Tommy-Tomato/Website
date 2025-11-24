@@ -18,7 +18,7 @@ const about = defineCollection({
 });
 
 const projects = defineCollection({
-  type: "data",   // ✅ FIXED
+  type: "data",
   schema: z.object({
     title: z.string(),
     shortDescription: z.string(),

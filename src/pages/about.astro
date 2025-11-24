@@ -27,20 +27,20 @@ import about from "../content/about/about.json";
           <img 
             src="/images/about2.jpg"
             alt="Thomas Gonzalez photo 2"
-            class="rounded-2xl shadow-lg w-full h-[200px] object-cover scroll-fade"
+            class="rounded-2xl shadow-lg w-full h-[400px] object-cover scroll-fade"
           />
 
           <img 
             src="/images/about3.jpg"
             alt="Thomas Gonzalez photo 3"
-            class="rounded-2xl shadow-lg w-full h-[200px] object-cover scroll-fade"
+            class="rounded-2xl shadow-lg w-full h-[400px] object-cover scroll-fade"
           />
         </div>
 
         <!-- ABOUT TEXT -->
-        <p class="text-lg leading-relaxed scroll-fade">
-          {about.aboutText}
-        </p>
+<div class="text-lg leading-relaxed space-y-6 scroll-fade">
+  {about.aboutText.split("\n\n").map(p => <p>{p}</p>)}
+</div>
 
       </div>
 

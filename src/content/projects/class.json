@@ -1,15 +1,23 @@
 {
   "title": "Class Projects",
-  "shortDescription": "*ADD MORE*",
-  "description": "in the works",
+  "shortDescription": "Particle Image velocimetry, Neural Networks, and more!",
+  "description": "Particle Image Velocimetry:\nIn this Fluid Mechanics lab, I used Particle Image Velocimetry (PIV) to measure and visualize the flow around a NACA4418 airfoil. By capturing rapid pairs of particle-seeded flow images and processing them with PIVlab in MATLAB, I computed velocity vectors and averaged multiple datasets to remove noise. This analysis allowed us to examine flow patterns such as velocity gradients, vorticity, and shear behavior around the airfoil at different angles of attack, giving deeper insight into the fluid dynamics and performance of the airfoil.\n\nEngine Subsystem Analysis:\nIn my Reverse Engineering & Diagnostics Course, I performed root cause analysis and subsystem diagnostics on a Ford 8N tractor engine. Through this project, I investigated failure modes, identified sources of mechanical inefficiency, and proposed targeted design improvements. I concluded the project by presenting my findings and recommended enhancements in a detailed technical presentation.\n\nNeural Network Design Project:\nIn my Neural Network Design project, I programmed and trained a three-layer neural network in MATLAB, implementing both forward propagation and backpropagation. I optimized the model’s weights and activation functions to reliably evaluate nonlinear relationships, ultimately demonstrating accurate classification of XOR inputs. This project strengthened my understanding of machine learning fundamentals, numerical methods, and algorithmic implementation.",
   "images": [
     {
-      "src": "/images/class1.png",
-      "caption": "Testing cycloidal gearbox"
+      "src": "/images/class1.jpg",
+      "caption": "Particle image velocimetry (PIV) analysis setup"
     },
     {
-      "src": "/images/class2.jpg",
-      "caption": "Testing cycloidal gearbox"
+      "src": "/images/class2.png",
+      "caption": "Filtered PIV plot, created using MATLAB"
+    },
+    {
+      "src": "/images/class3.jpg",
+      "caption": "Ford 8N Tractor Chassis"
+    },
+    {
+      "src": "/images/class4.jpg",
+      "caption": "Neural network validation curve, created using MATLAB"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
-  "title": "Variable Pursuits @ The Maryland Zoo",
+  "title": "Variable Pursuits - The Maryland Zoo",
   "shortDescription": "Arduino based node network improving animal welfare.",
-  "description": "As an Engineering Intern, I enhanced animal well-being by developing interactive enrichment devices that integrate Arduino microcontrollers with sound, motion detection, and RF communication modules. To improve usability, I created a C++ user interface that streamlined system control for zookeepers. Through extensive testing and validation of LiDAR, PIR, and Doppler sensors, I achieved a 95% detection accuracy rate. This project has also led to partnerships with leading zoos across the country, with active plans to implement the enrichment devices in facilities spanning over five states.",
+  "description": "As an Engineering Intern, I developed interactive enrichment devices to enhance animal well-being by integrating Arduino-based microcontrollers with sound cues, motion detection, and RF communication modules. Each node used audio cues to attract animals, and, when approached at the correct speed, would direct them to the next station in the course. Completing the full sequence rewarded the animal with food, creating an engaging and immersive experience. I also designed a C++ user interface that streamlined system control for zookeepers, improving usability and deployment. Through extensive testing and validation of LiDAR, PIR, and Doppler sensors, the system achieved a 95% detection accuracy rate. This project has since led to collaborations with major zoos across the country, with plans to implement the enrichment system in facilities spanning over five states.",
   "images": [
     {
       "src": "/images/sensors1.jpg",
-      "caption": "Testing cycloidal gearbox"
+      "caption": "Testing the Variable Pursuit system with Tuffy the elephant"
     },
     {
       "src": "/images/sensors2.jpg",
-      "caption": "Testing cycloidal gearbox"
+      "caption": "Indoor Prototype of a Variable Pursuits node using an XBee RF module and an Ultrasonic sensor"
     }
   ]
 }

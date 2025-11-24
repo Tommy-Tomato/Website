@@ -20,7 +20,12 @@ const { project } = Astro.props;
 
     <h1 class="text-4xl font-bold font-epoch">{project.data.title}</h1>
 
-    <p class="text-lg leading-relaxed">{project.data.description}</p>
+<div class="text-lg leading-relaxed space-y-6">
+  {project.data.description
+    .split("\n\n")
+    .map((p) => <p>{p}</p>)}
+</div>
+
 
     {project.data.images && project.data.images.length > 0 && (
   <div>
