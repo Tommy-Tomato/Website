@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from "astro:content"; 
 
 const home = defineCollection({
   type: "data",
@@ -23,12 +23,18 @@ const projects = defineCollection({
     title: z.string(),
     shortDescription: z.string(),
     description: z.string(),
-    images: z.array(
-      z.object({
-        src: z.string(),
-        caption: z.string().optional(),
-      })
-    ).optional(),
+    
+    // ⭐ Add this field
+    logo: z.string().optional(),
+
+    images: z
+      .array(
+        z.object({
+          src: z.string(),
+          caption: z.string().optional(),
+        })
+      )
+      .optional(),
   }),
 });
 

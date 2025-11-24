@@ -2,7 +2,7 @@
   "title": "Research Intern - AMIRo Lab",
   "shortDescription": "Needle reconstruction for autonomous prostate cancer procedures.",
   "description": "As a research intern at the AMIRo Lab, I developed calibration software to measure and predict needle deflection during robotic prostate cancer surgeries. TRUS biopsy needles are approximately 25 cm long, which means they can bend significantly within tissue. This bending reduces accuracy and increases the risk of patient injury. Using Python, I helped design an algorithm that uses sensors inside the needle to reconstruct its 3D shape, allowing real-time position tracking for autonomous surgical procedures.\n\nI designed and built a manual calibration rig in Creo to collect data for the algorithm and validated the system through gel phantom insertions using a 4 DOF mechanical arm programmed in ROS2 and Python. The algorithm’s predicted needle shape was compared to measurements from stereo cameras. This work gave me hands-on experience in surgical robotics, sensor calibration, data collection, and mechanical system integration.",
-
+  "logo": "/images/logos/researchlogo.jpg",
   "images": [
     {
       "src": "/images/research1.png",

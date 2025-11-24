@@ -16,14 +16,30 @@ const projects = await getCollection("projects");
           href={`/projects/${project.id}`} 
           class="card bg-base-200 shadow-xl hover:scale-[1.02] transition scroll-fade"
         >
-          <div class="card-body scroll-fade">
-            <h2 class="card-title font-epoch text-2xl scroll-fade">
-              {project.data.title}
-            </h2>
+          <div class="card-body flex items-center scroll-fade">
 
-            <p class="text-gray-600 scroll-fade">
-              {project.data.shortDescription}
-            </p>
+            <!-- LEFT SIDE: CENTERED TEXT -->
+            <div class="flex flex-col flex-grow items-center justify-center text-center scroll-fade">
+              <h2 class="card-title font-epoch text-2xl scroll-fade">
+                {project.data.title}
+              </h2>
+
+              <p class="text-gray-600 scroll-fade">
+                {project.data.shortDescription}
+              </p>
+            </div>
+
+            <!-- RIGHT SIDE: ROUNDED-SQUARE LOGO -->
+            {project.data.logo && (
+              <div class="ml-4 scroll-fade flex-shrink-0">
+                <img 
+                  src={project.data.logo}
+                  alt={`${project.data.title} logo`}
+                  class="h-16 w-16 rounded-xl object-cover"
+                />
+              </div>
+            )}
+
           </div>
         </a>
       ))}
