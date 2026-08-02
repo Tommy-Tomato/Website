@@ -35,19 +35,46 @@ content:
         type: text
 
   # Projects content folder (multiple JSON files)
-  - name: projects
-    label: Projects
-    type: collection
-    path: src/content/projects
-    view:
-      fields: [title]
-    fields:
-      - name: title
-        label: Project title
-        type: string
-      - name: description
-        label: Description
-        type: text
-      - name: link
-        label: Project link
-        type: string
+- name: projects
+  label: Projects
+  type: collection
+  path: src/content/projects
+  format: json
+  filename: "{primary}.json"
+
+  view:
+    fields: [title]
+
+  fields:
+    - name: title
+      label: Project title
+      type: string
+
+    - name: shortDescription
+      label: Short description
+      type: text
+
+    - name: description
+      label: Description
+      type: text
+
+    - name: logo
+      label: Logo
+      type: image
+      directory: public/images/logos
+      publicPath: /images/logos
+
+    - name: images
+      label: Images
+      type: object
+      list: true
+      fields:
+        - name: src
+          label: Image
+          type: image
+          directory: public/images
+          publicPath: /images
+
+        - name: caption
+          label: Caption
+          type: string
