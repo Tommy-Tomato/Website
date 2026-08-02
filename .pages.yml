@@ -9,20 +9,45 @@ content:
     type: file
     path: src/content/home/home.json
     fields:
+      - name: name
+        label: Name
+        type: string
+
+      - name: tagline
+        label: Tagline
+        type: string
+
+      - name: introImages
+        label: Intro images
+        type: object
+        list: true
+        fields:
+          - name: src
+            label: Image
+            type: image
+            directory: public/images
+            publicPath: /images
+          - name: alt
+            label: Alt text
+            type: string
+
       - name: heroTitle
         label: Hero title
         type: string
+
       - name: heroSubtitle
         label: Hero subtitle
         type: text
-      - name: resumeUrl
-        label: Resume URL
-        type: string
+
       - name: heroImage
         label: Hero Image
         type: image
         directory: public/uploads
         publicPath: /uploads
+
+      - name: resumeUrl
+        label: Resume URL
+        type: string
 
   # About page content (single JSON file)
   - name: about
