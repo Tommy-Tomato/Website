@@ -71,6 +71,10 @@ content:
       fields: [title]
 
     fields:
+      - name: order
+        label: Display order
+        type: number
+
       - name: title
         label: Project title
         type: string

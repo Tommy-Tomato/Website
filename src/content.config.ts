@@ -27,6 +27,8 @@ const projects = defineCollection({
     // ⭐ Add this field
     logo: z.string().optional(),
 
+    order: z.number().optional(),
+
     images: z
       .array(
         z.object({
