@@ -23,7 +23,7 @@ import home from "../content/home/home.json";
 
 <!-- RIGHT SIDE: IMAGES + VIDEO -->
   {(() => {
-    const isVideo = (src) => /\.(mp4|webm|mov)$/i.test(src);
+    const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
     const images = home.introMedia.filter((item) => !isVideo(item.src));
     const videos = home.introMedia.filter((item) => isVideo(item.src));
 

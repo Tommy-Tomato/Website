@@ -2,8 +2,8 @@
   "name": "Thomas Gonzalez",
   "tagline": "Engineering practical, human-centered mechanical and robotic systems",
   "introMedia": [
-    { "src": "/images/engine.jpg", "alt": "Engine" },
-    { "src": "/images/drawing.jpg", "alt": "Drawing" },
+    { "src": "/images/Rover.jpg", "alt": "Engine" },
+    { "src": "/images/machining.jpg", "alt": "Drawing" },
     { "src": "/images/MechatronicsTest.mov", "alt": "Mechatronics Test" }
   ],
   "heroTitle": "Hi, I'm Tommy",
