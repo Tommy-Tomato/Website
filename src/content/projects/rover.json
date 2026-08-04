@@ -2,24 +2,24 @@
   "order": 2,
   "title": "Hopkinauts Mars Rover Team",
   "shortDescription": "Autonomous Rover with custom 6 DOF mechanical arm.",
-  "description": "AS the Mechanical Subteam Lead for the Hopkinauts Mars Rover Team at Johns Hopkins University, I led a team of more than 20 students in designing and building the rover’s frame, robotic arm, and life-detection science box for the University Rover Challenge (URC). Our team was organized into three groups: Chassis, Arm, and Life Detection.\n\nFor the Chassis, we created a lightweight, modular 80/20 aluminum frame connected with custom waterjet-cut brackets. The chassis also incorporated a rocker-bogie suspension system and 3D printed TPU wheels. All structural components were verified through FEA using Ansys.\n\nFor the Arm, we designed a 6-DOF carbon fiber robotic arm equipped with custom cycloidal gearboxes and a precision end effector. Each of the six joints used brushless DC motors controlled by a Raspberry Pi, giving the arm high torque density and precise motion control.\n\nOur Life Detection system used a drilling mechanism to collect soil samples that were transferred into cuvettes for onsite chemical testing and spectroscopy. The system included multiple linear actuators and a custom peristaltic pump. Through these mechanisms, our team achieved an 80 percent life-detection accuracy.\n\nIn addition to my engineering work, I also helped raise 25,000 dollars through sponsorships and donations. Our team presented the rover at JHU Design Day 2025 and JHU Physics Day 2025.",
+  "description": "The Hopkinauts Mars Rover Team works to build a medium sized autonomous rover to compete in the University Rover challenge (URC), an international engineering competition with over 100 participants annually.\n\nCurrently I'm serving as the team's external vice president, helping to manage corporate and alumni connections while also leading the development of the Rover's mechanical arm. Previously, I served as the Mechanical subteam lead, managing a team of more than 20 students in designing and building the rover’s frame, robotic arm, and life-detection science system.\n\nFor the Arm, I'm currently developing a 6-Degree-Of-Freedom carbon fiber robotic arm equipped with custom cycloidal gearboxes and a precision end effector. Each of the six joints used brushless DC motors controlled by a Raspberry Pi, giving the arm high torque density and precise motion control. the gearboxes are in initial prototyping and testing faze, and we expect to have a fully working prototype by the end of 2026.\n\nFor the Chassis, we designed and manufactured a welded steel frame, optimizing for rigidity and dust resistance while minimizing weight. The frame is equipped with a 6 wheel rocker-bogie suspension system based on real NASA rover designs, ensuring effective obsticle traversal. each wheel uses a 3D printed TPU tire. These tires were analyzed using SolidWorks FEA in order to ensure optimal deformation under load in order to increase traction. \n\nOur Life Detection system used a drilling mechanism to collect soil samples that were transferred into cuvettes for onsite chemical testing and spectroscopy. The system included multiple linear actuators and a custom peristaltic pump. Through these mechanisms, our team achieved an 80 percent life-detection accuracy.\n\nIn may 2026, we got the opportunity to test our rover in the SLOPE Lab at the NASA Glenn research center in Cleveland, OH. The SLOPE Lab is used to analyze Roving vehicles for traction and dust resistance on simulated lunar and martian surfaces. The experience allowed us to analyze real world performance while gaining valuable feedback from NASA engineers.\n\nCheck out the Hopkinauts website!\nhttps://jhurover.org/",
   "logo": "/images/logos/roverlogo.png",
   "images": [
     {
-      "src": "/images/rover1.png",
-      "caption": "2025 Rover Frame"
-    },
-    {
-      "src": "/images/rover2.jpg",
-      "caption": "Custom wheel printed in-house using TPU"
+      "src": "/rover team.jpg",
+      "caption": "2026 Nasa Glenn Trip"
     },
     {
       "src": "/images/rover3.jpg",
       "caption": "Prototype end effector for mechanical arm"
     },
     {
-      "src": "/images/rover4.png",
+      "src": "/Gearbox.jpg",
       "caption": "Planetary gearbox design previously used for mechanical arm, assembly made in SolidWorks"
+    },
+    {
+      "src": "/images/rover2.jpg",
+      "caption": "Custom wheel printed in-house using TPU"
     }
   ]
 }
