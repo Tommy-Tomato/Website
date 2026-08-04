@@ -4,7 +4,7 @@
   "introMedia": [
     { "src": "/images/engine.jpg", "alt": "Engine" },
     { "src": "/images/drawing.jpg", "alt": "Drawing" },
-    { "src": "/images/lab.mov", "alt": "Lab" }
+    { "src": "/images/MechatronicsTest.mov", "alt": "Mechatronics Test" }
   ],
   "heroTitle": "Hi, I'm Tommy",
   "heroSubtitle": "Mechanical Engineering student at Johns Hopkins University passionate about building innovative robotic and mechanical systems.",
