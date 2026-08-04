@@ -1,10 +1,10 @@
 {
   "name": "Thomas Gonzalez",
   "tagline": "Engineering practical, human-centered mechanical and robotic systems",
-  "introImages": [
+  "introMedia": [
     { "src": "/images/engine.jpg", "alt": "Engine" },
     { "src": "/images/drawing.jpg", "alt": "Drawing" },
-    { "src": "/images/lab.jpg", "alt": "Lab" }
+    { "src": "/images/lab.mov", "alt": "Lab" }
   ],
   "heroTitle": "Hi, I'm Tommy",
   "heroSubtitle": "Mechanical Engineering student at Johns Hopkins University passionate about building innovative robotic and mechanical systems.",

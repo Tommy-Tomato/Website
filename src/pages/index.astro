@@ -23,13 +23,24 @@ import home from "../content/home/home.json";
 
   <!-- RIGHT SIDE: IMAGES GRID -->
   <div class="grid grid-cols-2 grid-rows-2 gap-6 max-w-xl scroll-fade">
-    {home.introImages.map((img, i) => (
-      <img
-        src={img.src}
-        alt={img.alt}
-        class={`rounded-2xl object-cover scroll-fade ${i === 2 ? "col-span-2 h-64 w-full" : "h-56 w-56"}`}
-      />
-    ))}
+    {home.introMedia.map((item, i) => {
+      const isVideo = /\.(mp4|webm|mov)$/i.test(item.src);
+      const classes = `rounded-2xl object-cover scroll-fade ${i === 2 ? "col-span-2 h-64 w-full" : "h-56 w-56"}`;
+
+      return isVideo ? (
+        <video
+          src={item.src}
+          class={classes}
+          autoplay
+          muted
+          loop
+          playsinline
+          aria-label={item.alt}
+        />
+      ) : (
+        <img src={item.src} alt={item.alt} class={classes} />
+      );
+    })}
   </div>
 
 </section>

@@ -17,18 +17,18 @@ content:
         label: Tagline
         type: string
 
-      - name: introImages
-        label: Intro images
+      - name: introMedia
+        label: Intro media
         type: object
         list: true
         fields:
           - name: src
-            label: Image
-            type: image
+            label: File
+            type: file
             directory: public/images
             publicPath: /images
           - name: alt
-            label: Alt text
+            label: Alt / caption text
             type: string
 
       - name: heroTitle
