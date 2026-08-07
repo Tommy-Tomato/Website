@@ -6,19 +6,19 @@
   "logo": "/images/logos/classlogo.png",
   "images": [
     {
-      "src": "/images/class1.jpg",
-      "caption": "Particle image velocimetry (PIV) analysis setup"
+      "src": "/images/mechatronics test2.mp4",
+      "caption": "Mechatronics robot search and scoring behavior test"
     },
     {
       "src": "/images/class2.png",
       "caption": "Filtered PIV plot, created using MATLAB"
     },
     {
-      "src": "/images/mechatronics test2.mp4",
-      "caption": "Search and Scoring behavior test"
+      "src": "/images/class1.jpg",
+      "caption": "Particle image velocimetry (PIV) analysis setup"
     },
     {
-      "src": "/images/class4.jpg",
+      "src": "/images/Sterling Engine.mp4",
       "caption": "Neural network validation curve, created using MATLAB"
     }
   ]

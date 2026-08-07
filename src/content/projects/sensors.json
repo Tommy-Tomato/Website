@@ -10,8 +10,12 @@
       "caption": "Testing the Variable Pursuit system with Tuffy the elephant"
     },
     {
-      "src": "/images/sensors2.jpg",
-      "caption": "Indoor Prototype of a Variable Pursuits node using an XBee RF module and an Ultrasonic sensor"
+      "src": "/images/Julio.jpg",
+      "caption": "Testing the Variable Pursuit system with Julio the armadillo"
+    },
+    {
+      "src": "/images/Variable Pursuits Test.mov",
+      "caption": "Indoor Prototype of a Variable Pursuits node using an XBee RF module and a passive infrared sensor"
     }
   ]
 }

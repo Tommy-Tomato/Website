@@ -6,20 +6,25 @@
   "logo": "/images/logos/roverlogo.png",
   "images": [
     {
-      "src": "/rover team.jpg",
-      "caption": "2026 Nasa Glenn Trip"
+      "src": "/images/Rover.jpg",
+      "caption": "Traction testing at NASA Glenn Research Center"
     },
     {
-      "src": "/images/rover3.jpg",
-      "caption": "Prototype end effector for mechanical arm"
+      "src": "/rover team.jpg",
+      "caption": "2026 Nasa Glenn Trip"
     },
     {
       "src": "/Gearbox.jpg",
       "caption": "SolidWorks assembly of base joint for mechanical arm"
     },
     {
+      "src": "/images/Rover Assembly.mov",
+      "caption": "Rover Chassis Assembly"
+    },
+    {
       "src": "/images/rover2.jpg",
       "caption": "Custom wheel printed in-house using TPU"
     }
+
   ]
 }
