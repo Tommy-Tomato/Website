@@ -13,6 +13,8 @@ export async function getStaticPaths() {
 
 
 const { project } = Astro.props;
+
+const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
 ---
 
 <Layout title={project.data.title}>
@@ -29,19 +31,35 @@ const { project } = Astro.props;
 
     {project.data.images && project.data.images.length > 0 && (
   <div>
-    <!-- IMAGE GRID -->
+    <!-- MEDIA GRID -->
     <div class="grid gap-10 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 mt-12">
       {project.data.images.map((img) => (
-        <div 
-          class="w-full h-[550px] rounded-2xl overflow-hidden shadow-xl cursor-pointer"
-          onclick={`openLightbox('${img.src}', \`${img.caption || ""}\`)`}
-        >
-          <img 
-            src={img.src} 
-            alt={project.data.title}
-            class="object-cover w-full h-full hover:scale-105 transition duration-300"
-          />
-        </div>
+        isVideo(img.src) ? (
+          <div
+            class="w-full h-[550px] rounded-2xl overflow-hidden shadow-xl cursor-pointer"
+            onclick={`openLightbox('${img.src}', \`${img.caption || ""}\`, true)`}
+          >
+            <video
+              src={img.src}
+              class="object-cover w-full h-full hover:scale-105 transition duration-300"
+              muted
+              loop
+              playsinline
+              autoplay
+            />
+          </div>
+        ) : (
+          <div 
+            class="w-full h-[550px] rounded-2xl overflow-hidden shadow-xl cursor-pointer"
+            onclick={`openLightbox('${img.src}', \`${img.caption || ""}\`, false)`}
+          >
+            <img 
+              src={img.src} 
+              alt={project.data.title}
+              class="object-cover w-full h-full hover:scale-105 transition duration-300"
+            />
+          </div>
+        )
       ))}
     </div>
 
@@ -56,6 +74,14 @@ const { project } = Astro.props;
         src="" 
         class="max-w-[90vw] max-h-[80vh] rounded-xl shadow-2xl object-contain"
       />
+      <video 
+        id="lightbox-video" 
+        src="" 
+        class="max-w-[90vw] max-h-[80vh] rounded-xl shadow-2xl object-contain hidden"
+        controls
+        autoplay
+        loop
+      />
 
       <!-- CAPTION -->
       <p id="lightbox-caption" class="mt-4 text-center max-w-2xl text-lg opacity-90"></p>
@@ -63,14 +89,31 @@ const { project } = Astro.props;
 
     <!-- LIGHTBOX SCRIPT -->
     <script is:inline>
-      function openLightbox(src, caption) {
-        document.getElementById("lightbox-img").src = src;
+      function openLightbox(src, caption, isVideo) {
+        const img = document.getElementById("lightbox-img");
+        const video = document.getElementById("lightbox-video");
+
+        if (isVideo) {
+          img.classList.add("hidden");
+          video.classList.remove("hidden");
+          video.src = src;
+          video.currentTime = 0;
+          video.play();
+        } else {
+          video.pause();
+          video.classList.add("hidden");
+          img.classList.remove("hidden");
+          img.src = src;
+        }
+
         document.getElementById("lightbox-caption").innerText = caption || "";
         document.getElementById("lightbox").classList.remove("hidden");
         document.body.style.overflow = "hidden";
       }
 
       function closeLightbox() {
+        const video = document.getElementById("lightbox-video");
+        video.pause();
         document.getElementById("lightbox").classList.add("hidden");
         document.body.style.overflow = "auto";
       }

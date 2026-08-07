@@ -99,8 +99,8 @@ content:
         list: true
         fields:
           - name: src
-            label: Image
-            type: image
+            label: file
+            type: file
             directory: public/images
             publicPath: /images
 
