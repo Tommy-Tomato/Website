@@ -16,6 +16,10 @@
     {
       "src": "/jig.jpg",
       "caption": "Jig for camera assembly"
+    },
+    {
+      "src": "/CAD.png",
+      "caption": "CAD of Bergamo III Multiphoton Microscope"
     }
   ]
 }
