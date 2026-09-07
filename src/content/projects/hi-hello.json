@@ -8,6 +8,10 @@
     {
       "src": "/Image.jpg",
       "caption": "Bergamo III Multiphoton Microscope"
+    },
+    {
+      "src": "/cnc.png",
+      "caption": "Computer-Aided Manufacturing Software"
     }
   ]
 }
