@@ -12,6 +12,10 @@
     {
       "src": "/cnc.png",
       "caption": "Computer-Aided Manufacturing Software"
+    },
+    {
+      "src": "/jig.jpg",
+      "caption": "Jig for Camera assembly"
     }
   ]
 }
