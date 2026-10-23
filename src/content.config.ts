@@ -24,7 +24,6 @@ const projects = defineCollection({
     shortDescription: z.string(),
     description: z.string(),
     
-    // ⭐ Add this field
     logo: z.string().optional(),
 
     order: z.number().optional(),

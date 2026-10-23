@@ -9,19 +9,19 @@ const projects = (await getCollection("projects"))
 <Layout title="Projects">
   <section class="max-w-6xl mx-auto py-10 scroll-fade">
 
-    <h1 class="text-4xl font-Epoch mb-10 scroll-fade">Projects</h1>
+    <h1 class="text-4xl mb-10 scroll-fade">Projects</h1>
 
     <div class="grid gap-8 grid-cols-1 md:grid-cols-2 scroll-fade">
       {projects.map((project) => (
         <a 
           href={`/projects/${project.id}`} 
-          class="card bg-base-200 shadow-xl hover:scale-[1.02] transition scroll-fade"
+          class="card bg-base-200 hover:scale-[1.02] transition scroll-fade"
         >
           <div class="card-body flex items-center scroll-fade">
 
             <!-- LEFT SIDE: CENTERED TEXT -->
             <div class="flex flex-col flex-grow items-center justify-center text-center scroll-fade">
-              <h2 class="card-title font-epoch text-2xl scroll-fade">
+              <h2 class="card-title text-2xl font-normal scroll-fade">
                 {project.data.title}
               </h2>
 

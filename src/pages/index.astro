@@ -12,7 +12,7 @@ import home from "../content/home/home.json";
 
   <!-- LEFT SIDE: TEXT -->
   <div class="max-w-xl scroll-fade">
-    <h1 class="text-6xl font-bold font-epoch leading-tight scroll-fade">
+    <h1 class="text-6xl font-semibold leading-tight scroll-fade">
       {home.name}
     </h1>
 
@@ -36,7 +36,7 @@ import home from "../content/home/home.json";
             <img
               src={img.src}
               alt={img.alt}
-              class="rounded-2xl object-cover h-56 w-56 scroll-fade"
+              class="object-cover h-56 w-56 scroll-fade"
             />
           ))}
         </div>
@@ -45,7 +45,7 @@ import home from "../content/home/home.json";
         {videos.map((vid) => (
           <video
             src={vid.src}
-            class="rounded-2xl object-cover w-56 h-full scroll-fade"
+            class="object-cover w-56 h-full scroll-fade"
             autoplay
             muted
             loop
@@ -64,12 +64,12 @@ import home from "../content/home/home.json";
 <!-- ============================= -->
 <!--         HERO SECTION          -->
 <!-- ============================= -->
-<section class="hero min-h-[70vh] bg-base-200 rounded-xl p-8 scroll-fade">
+<section class="hero min-h-[70vh] bg-base-200 rounded-2xl p-8 scroll-fade">
   <div class="hero-content flex-col lg:flex-row gap-10 scroll-fade">
 
     <!-- Left side: Text -->
     <div class="max-w-xl scroll-fade">
-      <h1 class="text-5xl font-bold font-epoch scroll-fade">
+      <h1 class="text-5xl font-semibold scroll-fade">
         {home.heroTitle}
       </h1>
 
@@ -78,22 +78,22 @@ import home from "../content/home/home.json";
       </p>
 
       <div class="flex gap-4 scroll-fade">
-        <a href="/projects" class="btn bg-teal-600 hover:bg-teal-700 text-white border-none scroll-fade">
+        <a href="/projects" class="btn btn-primary border-none scroll-fade">
           View My Projects
         </a>
 
-        <a href="/about" class="btn bg-transparent border-2 border-teal-600 text-teal-600 hover:bg-teal-50 scroll-fade">
+        <a href="/about" class="btn btn-secondary border-none scroll-fade">
           About Me
         </a>
 
-        <a href={home.resumeUrl} class="btn bg-teal-500 hover:bg-teal-600 text-white border-none scroll-fade">
+        <a href={home.resumeUrl} class="btn btn-primary border-none scroll-fade">
           Resume
         </a>
       </div>
     </div>
 
     <!-- Right side: Hero image -->
-    <div class="w-[450px] h-[450px] rounded-xl bg-base-300 overflow-hidden flex items-center justify-center scroll-fade">
+    <div class="w-[450px] h-[450px] bg-base-300 overflow-hidden flex items-center justify-center scroll-fade">
       <img
         src={home.heroImage}
         alt="Hero Image"
