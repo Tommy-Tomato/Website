@@ -1,4 +1,8 @@
 ---
+import "../styles.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
 const {
   title = "Thomas Gonzalez",
   description = "Portfolio of Thomas Gonzalez — Mechanical Engineering student specializing in robotics, mechanical design, and hands-on engineering projects.",
@@ -6,10 +10,9 @@ const {
   url = "https://thomasgonzalez.netlify.app",
 } = Astro.props;
 
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
+
 ---
-<html lang="en" data-theme="light"></html>
+
 
 <!doctype html>
 <html lang="en">
@@ -38,24 +41,7 @@ import Footer from "../components/Footer.astro";
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
-
-    <!-- Global Styles -->
-    <link rel="stylesheet" href="/src/styles.css" />
-
-    <!-- ⭐ FIXED: Scroll Animation MUST be global or Astro strips it -->
-    <style is:global>
-      .scroll-fade {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: opacity 0.9s ease, transform 0.9s ease;
-      }
-      .scroll-fade.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
 
     <slot name="head" />
   </head>
@@ -74,7 +60,6 @@ import Footer from "../components/Footer.astro";
       (function () {
         function initScrollFade() {
           const elements = document.querySelectorAll(".scroll-fade");
-          console.log("scroll-fade elements found:", elements.length);
 
           if (!elements.length) return;
 
@@ -82,7 +67,7 @@ import Footer from "../components/Footer.astro";
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                console.log("visible:", entry.target);
+
               }
             });
           });
